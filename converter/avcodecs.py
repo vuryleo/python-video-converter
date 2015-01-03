@@ -454,6 +454,13 @@ class Mp2Codec(AudioCodec):
     ffmpeg_codec_name = 'mp2'
 
 
+class Pcm_s16leCodec(AudioCodec):
+    """
+    pcm_s16le audio codec.
+    """
+    codec_name = 'pcm_s16le'
+    ffmpeg_codec_name = 'pcm_s16le'
+
 # Video Codecs
 class TheoraCodec(VideoCodec):
     """
@@ -622,7 +629,7 @@ class DVDSub(SubtitleCodec):
 
 audio_codec_list = [
     AudioNullCodec, AudioCopyCodec, VorbisCodec, AacCodec, Mp3Codec, Mp2Codec,
-    FdkAacCodec, Ac3Codec, DtsCodec, FlacCodec
+    FdkAacCodec, Ac3Codec, DtsCodec, FlacCodec, Pcm_s16leCodec
 ]
 
 video_codec_list = [

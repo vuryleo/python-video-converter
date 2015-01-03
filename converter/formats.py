@@ -92,7 +92,15 @@ class Mp3Format(BaseFormat):
     ffmpeg_format_name = 'mp3'
 
 
+class WavFormat(BaseFormat):
+    """
+    Wav container, used raw audo
+    """
+    format_name = 'wav'
+    ffmpeg_format_name = 'wav'
+
+
 format_list = [
     OggFormat, AviFormat, MkvFormat, WebmFormat, FlvFormat,
-    MovFormat, Mp4Format, MpegFormat, Mp3Format
+    MovFormat, Mp4Format, MpegFormat, Mp3Format, WavFormat
 ]
